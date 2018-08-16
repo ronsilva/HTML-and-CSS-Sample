@@ -13,20 +13,26 @@ font-family: lekton, monospace;
 /* Logo Red:  #C10505 */
 
 html, body {
-    background: #fff;
+    height: 100%;
+}
+
+html, body, header, main, footer {
+    background: #ffffff;
     margin: 0;
     padding: 0;
     border: 0;
     font-family: source-code-pro, sans-serif;
+    scroll-behavior: smooth;
 }
+
+header, main, footer {
+    width: 100%;
+ }
 
 header {
     position:fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 120px;
-    background: #fff;
+    background: #ffffff;
+    box-shadow: 1px 1px 1px #888888;
 }
 
 header a #logo {
@@ -35,6 +41,7 @@ header a #logo {
     float: left;
     width: 200px;
     height: 110px;
+    z-index: 100;
         
 }
 
@@ -46,6 +53,7 @@ nav {
 }
 
 nav ul {
+    padding-right: 20px;
     float: right;
 }  
 
@@ -55,38 +63,35 @@ nav ul {
     width: 100px;
     height: 120px;
     text-align: center;
-    line-height: 100px;
-    background: rgba(0,0,0,0.00);
+    line-height: 80px;
     text-decoration: none;
-    color:#C10505;
+    color: #C10505;
     font-family: acumin-pro, sans-serif;
     font-style: normal;
     font-weight: 400;
-        
 }
 
 main{
     margin: 0;
-    padding: 120px 0 0 0;
+    padding: 0 0 0 0;
     height: 100%;
     width: 100%;
 }
 
 #top_banner{
     background: url(../images/brooke-lark-229136-unsplash.jpg) no-repeat;
-    background-size: 100%;
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 700px;
-    clear: both;
-    display: block;
-    float: left;
-    margin: 0;
+    height: 100%;    
 }
 
 #top_banner_text{
     text-align: center;
     margin: 0 auto;
-    padding: 150px 0 0 0;
+    padding: 20% 0 0 0;
     width: 100%;
     height: 500px;
 }
@@ -127,7 +132,6 @@ main{
     height: auto;
     margin: 0 auto;
     padding: 0;
-    
 }
 
 .img_frame img {
