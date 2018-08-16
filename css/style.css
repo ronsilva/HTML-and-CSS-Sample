@@ -45,8 +45,11 @@ nav {
     background: rgba(0,0,0,0.00);
 }
 
-nav .nav_button {
-    padding-left: 70%;
+nav ul {
+    float: right;
+}  
+
+.nav_button {
     display: inline;
     float: left;
     width: 100px;
