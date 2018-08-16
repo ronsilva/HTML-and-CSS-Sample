@@ -1,2 +1,142 @@
 /* CSS Document */
 
+/* Typekit */
+@import url("https://use.typekit.net/yme8pob.css");
+
+/* font families for website
+font-family: anonymous-pro,sans-serif;
+font-family: source-code-pro, sans-serif;
+font-family: ubuntu-mono, sans-serif;
+font-family: lekton, monospace;
+*/
+/* Assets */
+/* Logo Red:  #C10505 */
+
+html, body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: source-code-pro, sans-serif;
+}
+
+header {
+    position:fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    background: #fff;
+}
+
+header a #logo {
+    background: url(../images/Logo.png) no-repeat center;
+    background-size: 75%;
+    float: left;
+    width: 200px;
+    height: 110px;
+        
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background: rgba(0,0,0,0.00);
+}
+
+nav .nav_button {
+    padding-left: 70%;
+    display: inline;
+    float: left;
+    width: 100px;
+    height: 120px;
+    text-align: center;
+    line-height: 100px;
+    background: rgba(0,0,0,0.00);
+    text-decoration: none;
+    color:#C10505;
+    font-family: acumin-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+        
+}
+
+main{
+    margin: 0;
+    padding: 120px 0 0 0;
+    height: 100%;
+    width: 100%;
+}
+
+#top_banner{
+    background: url(../images/brooke-lark-229136-unsplash.jpg) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 700px;
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0;
+}
+
+#top_banner_text{
+    text-align: center;
+    margin: 0 auto;
+    padding: 150px 0 0 0;
+    width: 100%;
+    height: 500px;
+}
+
+#top_banner_text h1, #top_banner_text h4 {
+    line-height: 5px;
+    font-family: anonymous-pro,sans-serif;
+    font-size: 5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+#top_banner_text h4 {
+    color: #EDC494;
+    font-size: 1.8em;
+    font-style:normal;
+    font-variant: small-caps;
+}
+
+#reviews {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+
+#reviews h2 {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.img_frame {
+    flex-wrap: wrap;
+    display: flex;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+.img_frame img {
+    width: 100%;
+    height: 100%;
+    border:dashed thin #FF0004;
+    overflow-y: hidden;
+}
+
+.overlay {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: thin dashed #00ff00;
+}

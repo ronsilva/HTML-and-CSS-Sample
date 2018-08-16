@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Space Resort - 2018</title>
+		<title>Muzza - The Food Review Site</title>
 		<meta charset="utf-8">
-		
+        
+        <!-- Links -->
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+        
+        <!-- Fonts -->
+        <script src="//use.edgefonts.net/anonymous-pro;source-code-pro;ubuntu-mono.js;lekton.js"></script>
+
 	</head>
-	<body>
-		<header>
+	<body id="home">
+        <header>
+            <a href="#home"><span id="logo"></span></a>
 			<nav>
-				<a href="#home" class="nav_button">About Us</a>
-				<a href="#gallery" class="nav_button">GALLERY</a>
-				<a href="#contact" class="nav_button">RESERVATIONS</a>
+                <a href="#about" class="nav_button">About Us</a>
+				<a href="#reviews" class="nav_button">Reviews</a>
+				<a href="#contact" class="nav_button">Contact Us</a>
 			</nav>		
 		</header>
 		
-		<main id="home">
+		<main>
 			<section id="top_banner">
-				<span>The Space Resort</span>
+				<div id="top_banner_text">
+                    <h1>The Food Review</h1>
+                    <h4>By A Well Rounded Foodie</h4>
+                </div>
 			</section>
 			
 			
-			<section id="gallery">
-				<h1>Gallery</h1>
+			<section id="reviews">
+				<h2>The Reviews</h2>
 				
 				<div class="img_frame">
-					<img src="images/thumb/thumbnail_1.png" alt="Nice Picture"/>
+					<img src="images/brooke-lark-158019-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
@@ -33,7 +43,7 @@
 				</div>
 				
 				<div class="img_frame">
-					<img src="images/thumb/thumbnail_2.png" alt="Nice Picture"/>
+					<img src="images/brooke-lark-261287-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
@@ -41,7 +51,7 @@
 				</div>
 				
 				<div class="img_frame">
-					<img src="images/thumb/thumbnail_3.png" alt="Nice Picture"/>
+					<img src="images/brooke-lark-331977-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
@@ -49,7 +59,7 @@
 				</div>
 				
 				<div class="img_frame">
-					<img src="images/thumb/thumbnail_4.png" alt="Nice Picture"/>
+					<img src="images/edgar-castrejon-459807-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
@@ -57,39 +67,39 @@
 				</div>
 				
 				<div class="img_frame">
-					<img src="images/thumb/thumbnail_5.png" alt="Nice Picture"/>
+					<img src="images/edward-guk-357344-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
 					</div>
 				</div>
 				
-				<div class="img_frame">
-					<img src="images/thumb/thumbnail_6.png" alt="Nice Picture"/>
+                <div class="img_frame">
+					<img src="images/harnish-ganatra-771459-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
 					</div>
 				</div>
 				
-				<div class="img_frame">
-					<img src="images/thumb/thumbnail_7.png" alt="Nice Picture"/>
+                <div class="img_frame">
+					<img src="images/monika-grabkowska-771893-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
 					</div>
 				</div>
 				
-				<div class="img_frame">
-					<img src="images/thumb/thumbnail_8.png" alt="Nice Picture"/>
+                <div class="img_frame">
+					<img src="images/nick-agus-arya-772500-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
 					</div>
 				</div>
 				
-				<div class="img_frame">
-					<img src="images/thumb/thumbnail_9.png" alt="Nice Picture"/>
+                <div class="img_frame">
+					<img src="images/ruslan-bardash-366328-unsplash.jpg" alt="Nice Picture"/>
 					<div class="overlay">
 						<h3>Click to Enlarge</h3>
 						<p>We have several space launches departing daily, book your flight today!</p>
@@ -99,7 +109,21 @@
 			
 			
 			<section id="contact">
-			
+			    <div id="form_wrapper">
+                    <form>
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Message">
+                        <input type="checkbox"><span>YES! Send me e-main updates.</span>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="social_wrapper">
+                    <div class="social"></div>
+                    <div class="social"></div>
+                    <div class="social"></div>
+                
+                </div>
 			</section>
 	
 		</main>
