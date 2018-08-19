@@ -13,57 +13,57 @@ font-family: lekton, monospace;
 /* Logo Red:  #C10505 */
 
 html, body {
-    height: 100%;
-}
-
-html, body, header, main, footer {
+    position: relative;
     background: #ffffff;
     margin: 0;
     padding: 0;
     border: 0;
+    height: 100%;
     font-family: source-code-pro, sans-serif;
     scroll-behavior: smooth;
+ }
+
+h2 {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
 }
 
 header, main, footer {
     width: 100%;
- }
+}
 
 header {
     position:fixed;
     background: #ffffff;
-    box-shadow: 1px 1px 1px #888888;
+    box-shadow: 1px 1.5px 1px 0.5px #888888;
+    z-index: 100;
 }
 
-header a #logo {
-    background: url(../images/Logo.png) no-repeat center;
-    background-size: 75%;
+#logo {
     float: left;
-    width: 200px;
-    height: 110px;
-    z-index: 100;
-        
+    width: 100px;
+    padding: 0 0 10px 15px;
 }
 
 nav {
-    position: fixed;
-    width: 100%;
-    height: 150px;
+    float: right;
     background: rgba(0,0,0,0.00);
 }
 
 nav ul {
-    padding-right: 20px;
     float: right;
+    margin: 0;
+    padding: 0 20px 0 0;
 }  
 
 .nav_button {
     display: inline;
     float: left;
     width: 100px;
-    height: 120px;
+    height: auto;
     text-align: center;
-    line-height: 80px;
+    line-height: 85px;
     text-decoration: none;
     color: #C10505;
     font-family: acumin-pro, sans-serif;
@@ -73,7 +73,7 @@ nav ul {
 
 main{
     margin: 0;
-    padding: 0 0 0 0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
@@ -85,7 +85,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;    
+    height: 100%;
 }
 
 #top_banner_text{
@@ -111,39 +111,178 @@ main{
     font-variant: small-caps;
 }
 
-#reviews {
-    float: left;
-    width: 100%;
-    height: auto;
+#about {
     margin: 0 auto;
-    padding: 50px 0 0 0;
+    width: 100%;
+    height: 100%;
+    padding: 130px 0 0 0;
+    background-image: url(../images/brooke-lark-500141-unsplash.jpg);
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about_text {
+    display: flex;
+    flex-flow: wrap;
+}
+
+#about h2 {
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+
+#about p {
+    text-align: center;
+    width: 60%;
+    font-size: 1.5em;
+    padding: 20px auto;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+#reviews {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
 }
 
 #reviews h2 {
-    font-size: 2em;
-    width: 100%;
-    text-align: center;
+    color: #444444;
 }
 
 .img_frame {
-    flex-wrap: wrap;
-    display: flex;
-    width: 40%;
-    height: auto;
-    margin: 0 auto;
+    position: relative;
+    float: left;
+    width: 32%;
+    height: 100%;
+    margin: 5px auto;
     padding: 0;
 }
 
 .img_frame img {
     width: 100%;
     height: 100%;
-    border:dashed thin #FF0004;
-    overflow-y: hidden;
+    z-index: 0;
 }
 
 .overlay {
+    position: absolute;
+    top: 0;
     margin: 0;
     padding: 0;
     width: 100%;
-    border: thin dashed #00ff00;
+    height: 99.3%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.50);
+}
+
+.overlay h3, .overlay p {
+    padding: 0 15px;
+    position: relative;
+    top: 15%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.overlay h3 {
+    font-size: 2em;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    top: 15%;
+}
+
+#contact {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 130px 0 0 0;
+    background-image: url(../images/pablo-merchan-montes-772134-unsplash.jpg);
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+#form_wrapper {
+    width: 35%;
+    margin: 0 auto;
+    padding: 35px 35px;
+    background-color: rgba(0,0,0,0.50);
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+form input.text {
+    margin: 15px auto;
+    width: 100%;
+    height: 25px;
+    padding: 0 0 0 5px;
+}
+
+form textarea {
+    margin: 15px auto;
+    width: 100%;
+    height: 25px;
+    padding: 0 0 0 5px;
+    font-family: ubuntu-mono, sans-serif;
+    line-height: 25px;
+}
+
+form span {
+    width: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+form button {
+    display: block;
+    margin: 0px auto;
+    margin-top: 25px;
+    padding: 5px 25px;
+    border-radius: 10px;
+}
+
+footer{
+    position:fixed;
+    z-index: 3;
+    bottom: 0;
+    margin: 0;
+    width:100%;
+    height:8%;
+    background:#fff;
+}
+
+#social_wrapper {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.social {
+    height: auto;
+    display: inline-block;
+    padding: 10px 15px 0 15px;
+}
+
+.social img {
+    width: 75%;
+}
+
+#copyright {
+    color: #999999;
+    text-align: right;
+    margin: -25px 0 0 0;
+    padding: 0 5% 0 0;
 }
