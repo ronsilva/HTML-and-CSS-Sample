@@ -2,15 +2,12 @@
 
 /* Typekit */
 @import url("https://use.typekit.net/yme8pob.css");
+/* "acumin-pro" & "halyard-display" */
 
-/* font families for website
-font-family: anonymous-pro,sans-serif;
-font-family: source-code-pro, sans-serif;
-font-family: ubuntu-mono, sans-serif;
-font-family: lekton, monospace;
-*/
-/* Assets */
+/* Colors */
 /* Logo Red:  #C10505 */
+
+/* START WHOLE PAGE STYLE */
 
 html, body {
     position: relative;
@@ -19,19 +16,35 @@ html, body {
     padding: 0;
     border: 0;
     height: 100%;
-    font-family: source-code-pro, sans-serif;
+    font-family: "acumin-pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
     scroll-behavior: smooth;
+    word-wrap: normal;
  }
 
 h2 {
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    height: 50px;
     font-size: 2em;
     width: 100%;
     text-align: center;
+    font-family: "halyard-display",sans-serif;
+
 }
 
 header, main, footer {
+    margin: 0;
+    padding: 0;
     width: 100%;
+    display: block;
 }
+
+/* END WHOLE PAGE STYLE*/
+
+/* START HEADER STYLE */
 
 header {
     position:fixed;
@@ -40,10 +53,18 @@ header {
     z-index: 100;
 }
 
-#logo {
+#logo, #logo:visited {
     float: left;
     width: 100px;
     padding: 0 0 10px 15px;
+    transition: linear 0.3s;
+}
+
+#logo:hover {
+    float: left;
+    width: 100px;
+    padding: 0 0 10px 15px;
+    transform: scale(1.02);
 }
 
 nav {
@@ -57,82 +78,77 @@ nav ul {
     padding: 0 20px 0 0;
 }  
 
-.nav_button {
+.nav_button, .nav_button:visited {
     display: inline;
     float: left;
     width: 100px;
-    height: auto;
+    height: 100px;
     text-align: center;
     line-height: 85px;
     text-decoration: none;
     color: #C10505;
-    font-family: acumin-pro, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    transition: ease 0.4s;
 }
 
+.nav_button:hover, .nav_button:active {
+    background-color: #C10505;
+    display: inline;
+    float: left;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 85px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+/* END HEADER STYLE */
+
+/* START MAIN STYLE */
+
 main{
-    margin: 0;
-    padding: 0;
     height: 100%;
-    width: 100%;
 }
 
 #top_banner{
-    background: url(../images/brooke-lark-229136-unsplash.jpg) no-repeat;
-    background-attachment: fixed;
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100%;
+    background: url(../images/brooke-lark-229136-unsplash.jpg);
 }
 
-#top_banner_text{
+#top_banner_textbox{
     text-align: center;
+    font-style:normal;
     margin: 0 auto;
-    padding: 20% 0 0 0;
+    padding: 0;
+    padding-top: 20%;
     width: 100%;
-    height: 500px;
+    height: 500px;    
 }
 
-#top_banner_text h1, #top_banner_text h4 {
+#top_banner_textbox h1, #top_banner_textbox h4 {
     line-height: 5px;
-    font-family: anonymous-pro,sans-serif;
-    font-size: 5em;
-    color: #ffffff;
     text-shadow: 2px 2px 8px #000000;
 }
 
-#top_banner_text h4 {
+#top_banner_textbox h1 {
+    word-break: keep-all;
+    color: #ffffff;
+    font-size: 5em;
+}
+
+#top_banner_textbox h4 {
     color: #EDC494;
     font-size: 1.8em;
-    font-style:normal;
     font-variant: small-caps;
 }
 
 #about {
-    margin: 0 auto;
     width: 100%;
     height: 100%;
-    padding: 130px 0 0 0;
+    padding: 150px 0 0 0;
     background-image: url(../images/brooke-lark-500141-unsplash.jpg);
-    background-attachment: fixed;
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#about_text {
-    display: flex;
-    flex-flow: wrap;
-}
-
-#about h2 {
-    color: #444444;
-    margin: 0;
-    padding: 0;
-    height: 50px;
 }
 
 #about p {
@@ -150,11 +166,12 @@ main{
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
-    padding: 100px 0 0 0;
+    padding: 120px 0 0 0;
 }
 
 #reviews h2 {
     color: #444444;
+    padding: 0 0 25px 0;
 }
 
 .img_frame {
@@ -180,15 +197,29 @@ main{
     width: 100%;
     height: 99.3%;
     z-index: 2;
-    background-color: rgba(0,0,0,0.50);
+    transition-duration: 0.4s;
+    opacity: 0;
 }
 
-.overlay h3, .overlay p {
+.overlay:hover {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 99.3%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.50);
+    opacity: 1;
+}
+
+.overlay h3, .overlay p, .review_text {
     padding: 0 15px;
     position: relative;
     top: 15%;
     text-align: center;
     color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 .overlay h3 {
@@ -197,26 +228,58 @@ main{
 
 .overlay p {
     font-size: 1.2em;
-    top: 15%;
 }
 
+.review_text {
+    height: 50%;
+    overflow-y: scroll
+}
+
+.review_text p {
+    top: 0;
+}
+
+/* width */
+.review_text::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+.review_text::-webkit-scrollbar-track {
+    opacity: 0; 
+}
+ 
+/* Handle */
+.review_text::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3); 
+}
+
+/* Handle on hover */
+.review_text::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+
 #contact {
+    background-image: url(../images/pablo-merchan-montes-772134-unsplash.jpg);
     position: relative;
     margin: 0 auto;
     width: 100%;
     height: 100%;
-    padding: 130px 0 0 0;
-    background-image: url(../images/pablo-merchan-montes-772134-unsplash.jpg);
-    background-attachment: fixed;
-    background-position:top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 0;
     z-index: 2;
+}
+
+#contact h2 {
+    color: #333333;
+    margin: 0;
+    padding: 150px 0 0 0;
 }
 
 #form_wrapper {
     width: 35%;
-    margin: 0 auto;
+    margin: 25px auto 0 auto;
     padding: 35px 35px;
     background-color: rgba(0,0,0,0.50);
     border-radius: 10px;
@@ -236,7 +299,8 @@ form textarea {
     width: 100%;
     height: 25px;
     padding: 0 0 0 5px;
-    font-family: ubuntu-mono, sans-serif;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 400;
     line-height: 25px;
 }
 
@@ -254,13 +318,13 @@ form button {
     border-radius: 10px;
 }
 
+/* START FOOTER STYLE */
+
 footer{
     position:fixed;
     z-index: 3;
     bottom: 0;
-    margin: 0;
-    width:100%;
-    height:8%;
+    height:6%;
     background:#fff;
 }
 
@@ -270,10 +334,18 @@ footer{
     padding: 0;
 }
 
-.social {
+.social, .social:visited {
     height: auto;
     display: inline-block;
     padding: 10px 15px 0 15px;
+    transition: linear 0.3s;
+}
+
+.social:hover {
+    height: auto;
+    display: inline-block;
+    padding: 10px 15px 0 15px;
+    transform: scale(1.1);
 }
 
 .social img {
@@ -283,6 +355,18 @@ footer{
 #copyright {
     color: #999999;
     text-align: right;
-    margin: -25px 0 0 0;
-    padding: 0 5% 0 0;
+    margin: -30px 0 0 0;
+    padding: 0 8% 0 0;
+}
+
+/* END FOOTER STYLE */
+
+
+/* COVER IMAGES */ 
+
+#top_banner, #about, #contact {
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
