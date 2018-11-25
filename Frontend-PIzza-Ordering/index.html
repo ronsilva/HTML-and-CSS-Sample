@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bella &amp; Luca's Pizza Place</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    
+<meta content="Bella & Luca's Pizza Place is a hip new joint for young and old alike!">    
+    </head>
+    <body class="bgImage" onLoad="extras()">
+        <header>
+            <nav class="navbar">
+                <div class="navbar-brand">B&amp;L's Pizza Place</div>
+                <div class="navbar-text"> Order Page - Please place your order below.</div><br><span id="mobile-text"><strong>Please scroll down to see selections</strong></span>
+                
+            </nav>
+        </header>
+        <main class="container-fluid">
+            <section class="pizzaImages">
+                <img class="tform-15" src="images/ablimit-ablet-675553-unsplash.jpg" alt="Pizza-1">
+                <img class="tform-5" src="images/alan-hardman-780215-unsplash.jpg" alt="Pizza-2">
+                <img class="tform-15" src="images/fallon-travels-785487-unsplash.jpg" alt="Pizza-3">
+                <img class="tform-5" src="images/kristina-bratko-748111-unsplash.jpg" alt="Pizza-4">
+            </section>
+            
+            <section class="order text-black">
+                <div>
+                    <h4>Pizza Size:</h4>
+                    <ul>
+                        <li>Personal<input type="radio" class="size" name="size" value="Personal" onClick="sizeSelected(this.value);total()"></li>
+                        <li>Medium<input type="radio" class="size" name="size" value="Medium" onClick="sizeSelected(this.value);total()"></li>
+                        <li>Large<input type="radio" class="size" name="size" value="Large" onClick="sizeSelected(this.value);total()"></li>
+                        <li>Extra Large<input type="radio" class="size" name="size" value="XLarge" onClick="sizeSelected(this.value);total()"></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Crust options:</h4>
+                    <ul>
+                        <li>Plain Crust<input type="radio" class="crust" name="crust" value="Plain" onClick="crustSelected(this.value);total()"></li>
+                        <li>Garlic Butter Crust<input type="radio" class="crust" name="crust" value="Garlic" onClick="crustSelected(this.value);total()"></li>
+                        <li>Cheese Stuffed Crust<input type="radio" class="crust" name="crust" value="Stuffed" onClick="crustSelected(this.value);total()"></li>
+                        <li>Spicy Crust<input type="radio" class="crust" name="crust" value="Spicy" onClick="crustSelected(this.value);total()"></li>
+                        <li>House Special Crust<input type="radio" class="crust" name="crust" value="House" onClick="crustSelected(this.value);total()"></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4>Sauce options:</h4>
+                    <ul>
+                        <li>Marinara Sauce<input type="radio" class="sauce" name="sauce" value="Marinara" onClick="sauceSelected(this.value)"></li>
+                        <li>White Sauce<input type="radio" class="sauce" name="sauce" value="White" onClick="sauceSelected(this.value)"></li>
+                        <li>Barbeque Sauce<input type="radio" class="sauce" name="sauce" value="BBQ" onClick="sauceSelected(this.value)"></li>
+                        <li>No Sauce<input type="radio" class="sauce" name="sauce" value="NO" onClick="sauceSelected(this.value)"></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Cheese options:</h4>
+                    <ul>
+                        <li>Regular<input type="radio" class="cheese" name="cheese" value="Regular" onClick="cheeseSelected(this.value);total()"></li>
+                        <li>No Cheese<input type="radio" class="cheese" name="cheese" value="No Cheese" onClick="cheeseSelected(this.value);total()"></li>
+                        <li>Extra Cheese<input type="radio" class="cheese" name="cheese" value="Extra Cheese" onClick="cheeseSelected(this.value);total()"></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Pick your meats:</h4>
+                    <ul>
+                        <li>Pepperoni<input type="checkbox" class="meats" name="meats" value="Pepperoni" onClick="meatSelect(this.value);total()"></li>
+                        <li>Sausage<input type="checkbox" class="meats" name="meats" value="Sausage" onClick="meatSelect(this.value);total()"></li>
+                        <li>Canadian Bacon<input type="checkbox" class="meats" name="meats" value="Canadian Bacon" onClick="meatSelect(this.value);total()"></li>
+                        <li>Ground Beef<input type="checkbox" class="meats" name="meats" value="Ground Beef" onClick="meatSelect(this.value);total()"></li>
+                        <li>Anchovy<input type="checkbox" class="meats" name="meats" value="Anchovy" onClick="meatSelect(this.value);total()"></li>
+                        <li>Chicken<input type="checkbox" class="meats" name="meats" value="Chicken" onClick="meatSelect(this.value);total()"></li>
+                    </ul>
+                </div>               
+                <div>
+                    <h4>Pick your veggiess</h4>
+                    <ul>
+                        <li>Tomatoes <input type="checkbox" class="veggies" name="veggies" value="Tomatoes" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Onions <input type="checkbox" class="veggies" name="veggies" value="Onions" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Olives <input type="checkbox" class="veggies" name="veggies" value="Olives" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Green Perpers <input type="checkbox" class="veggies" name="veggies" value="Green Peppers" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Muchrooms <input type="checkbox" class="veggies" name="veggies" value="Muchrooms" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Pineapples <input type="checkbox" class="veggies" name="veggies" value="Pineapples" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Spinach <input type="checkbox" class="veggies" name="veggies" value="Spinach" onClick="veggieSelect(this.value);total()"></li>
+                        <li>Jalapeno <input type="checkbox" class="veggies" name="veggies" value="Jalapeno" onClick="veggieSelect(this.value);total()"></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="total" class="text-black">
+                <div id="basePrice">
+                    <p>Pizza size: <span id="size"></span></p>
+                    <p>Pizza crust:<span id="crust"></span></p>
+                    <p>Pizza sause: <span id="sauce"></span></p>
+                    <p>Cheese selection: <span id="cheese"></span></p>
+                    <p>Meat selections: <span id="firstMeat"></span></p>
+                    <p>Veggie Selections: <span id="firstVeggie"></span></p>
+                </div>
+                <div id="modifiers">
+                    <p id="stuffedCrust">Cheese Stuffed Crust: + $3.00</p>
+                    <p id="xCheese">Extra Cheese: + $3.00</p>
+                    <p>+$1.00 for each additional meat:<br><span id="meats"></span></p>
+                    <p>+$1.00 for each additional veggie:<br><span id="veggies"></span></p>
+                </div>
+                <div id="totalPrice">
+                    <p class="d-block w-100 font-weight-bold mb-2">Total Due: $ <span id="finalTotal">*</span></p>
+                    <button class="btn-outline-dark w-100" type="button" data-toggle="modal" data-target="#orderModal">Place my order</button>
+                </div>
+            </section>
+            <!--Order modal-->
+            <div class="modal" id="orderModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Your order has been placed.</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Order#: 156324</p>
+                            <p>Thank you for your order.</p>
+                            <p>Your order will be ready soon.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <script>
+       var pizzaSize;
+        function sizeSelected(size){
+            document.querySelector("#size").innerHTML = size;
+        }
+        function crustSelected(crust){
+            document.querySelector("#crust").innerHTML = crust;
+            if(crust === "Stuffed"){
+                document.querySelector("#stuffedCrust").innerHTML = "Cheese Stuffed Crust: + $3.00 &#10004;";
+            }else{
+                document.querySelector("#stuffedCrust").innerHTML = "Cheese Stuffed Crust: + $3.00";
+            }
+        };
+        function sauceSelected(sauce){
+            document.querySelector("#sauce").innerHTML = sauce;
+        };
+        function cheeseSelected(cheese){
+            document.querySelector("#cheese").innerHTML = cheese;
+            if(cheese === "Extra Cheese"){
+                document.querySelector("#xCheese").innerHTML = "Extra Cheese: + $3.00 &#10004;";
+            }else{
+                document.querySelector("#xCheese").innerHTML = "Extra Cheese: + $3.00";
+            }
+        };
+        var meatList = [];
+        var veggiesList = [];
+        var item;
+        var list;
+        //Handles meat selctions
+        function meatSelect(meats){
+            //feeds the meat selection and the list to the "select" fn().
+            item = meats;
+            list = meatList;
+            select();
+            var firstMeat = document.getElementById("firstMeat");
+            document.getElementById("meats").innerHTML = meatList;
+            firstMeat.innerHTML = meatList[0];
+            //Handles 'undefind' being output on screen.
+            if (meatList[0] === undefined){
+                firstMeat.innerHTML = "";
+            }
+        }
+        //Handles veggie selections
+        function veggieSelect(veggies){
+            //feeds the veggie selection and the list to the "select" fn().
+            item = veggies;
+            list = veggiesList;
+            select();
+            document.getElementById("veggies").innerHTML = veggiesList;
+            var  firstVeggie = document.getElementById("firstVeggie");
+            firstVeggie.innerHTML = veggiesList[0];
+            //Handles 'undefind' being output on screen.
+            if (veggiesList[0] === undefined){
+                firstVeggie.innerHTML = "";
+            }
+        }
+        //Select funtion for both meats and veggies. 
+        function select(){
+            if (list.length == 0){
+                list.push(item);
+            }else if(list.length >= 1){
+                var itemFound = false;
+                for(var i = 0; i < list.length; i++){
+                    if (item === list[i]){
+                        itemFound = true;
+                        list.splice(i,1);
+                    }
+                }
+                if (!itemFound){
+                    list.push(item);
+                }
+            }
+        }
+        //set a total container
+        function total(){    
+            var pS = document.getElementById("size").innerHTML;
+            if(pS === "Personal"){
+                var pST = 10;
+            }else if(pS === "Medium"){
+                pST = 12;
+            }else if(pS === "Large"){
+                pST = 14;
+            }else if(pS === "XLarge"){
+                pST = 16;
+            }
+            var cr = document.getElementById("crust").innerHTML;
+            if(cr === "Stuffed"){
+                var crT = 3; 
+            }else{
+                crT = 0
+            }
+            var ch = document.getElementById("cheese").innerHTML;
+            if(ch === "Extra Cheese"){
+                var chT = 3;
+            }else{
+                chT = 0;
+            }
+            //var xM = document.getElementById("meats").innerHTML;
+            if(meatList.length >= 2){
+                var xMT = meatList.length - 1;
+            }else{
+                xMT = 0;
+            }
+            if(veggiesList.length >= 2){
+                var xVT = veggiesList.length - 1;
+            }else{
+                xVT = 0;
+            }
+            var t = document.getElementById("finalTotal");
+            var fT = pST + crT + chT + xMT + xVT 
+            t.innerHTML = fT;
+        }
+    </script>
+  </main>
+        <!--Bootstrap CDN-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>       
+    </body>
+</html>
